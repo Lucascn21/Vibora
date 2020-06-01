@@ -1,8 +1,10 @@
 var express = require('express');
 var app = express();
 
+
+//Ruta a nuestra raiz
 app.get('/', function(req, res) {
-    res.send('Hello World!');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(3000, function() {
